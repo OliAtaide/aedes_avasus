@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="sidebar d-flex flex-column">
+        <div class="d-flex w-100 justify-content-end">
+            <button class="btn btn-back">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+        </div>
+        <ul>
+            <li class="my-2">
+                <h6>
+                    UNIDADE 2
+                </h6>
+                <p>
+                    Biologia e Morfologia
+                    dos Vetores
+                </p>
+            </li>
+            <li class="my-2">
+                <h6>
+                    Módulo
+                </h6>
+                <p>
+                    Biologia, monitoramento
+                    e controle de Aedes aegypti
+                </p>
+            </li>
+            <li class="my-2">
+                <h6>
+                    Conteudistas
+                </h6>
+                <p>
+                    Renata Antonaci Gama
+                    <br>
+                    Taciano de Moura Barbosa
+                </p>
+            </li>
+        </ul>
+        <img class="mt-auto" src="imgs/avasus_logo.svg" alt="">
+        <img class="mt-3" src="imgs/ellipsis.svg" alt="">
+    </nav>
+    <div class="game">
+        <div class="title w-100 text-end">
+            Quiz: Mitos e verdades sobre o Aedes aegypti
+        </div>
+        <div class="game-container">
+            <div class="game-body d-flex">
+                <div class="card game-card p-3 m-auto">
+                    <h4 class="card-title text-center my-auto">
+                        Ao iniciar o nosso Quiz, você deverá ler as sentenças a respeito do mosquito Aedes aegypti e
+                        julgá-las se são mitos ou verdades. Para isso, clique com o mouse em "MITO" ou "VERDADE" de
+                        acordo com seu julgamento.
+                    </h4>
+                    <button class="btn btn-next" data-next="game-card-0">
+                        Iniciar Atividade
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+<script>
+    var questoes;
+    var acertos = 0;
+
+    $.ajax({
+        url: './aedes.json',
+        dataType: "json",
+        type: 'GET',
+        success: function (_data) {
+            questoes = _data[0].questoes;
+            console.log(questoes);
+            _data[0].questoes.forEach(function (value, i) {
+                $('.game-body').append(
+                    `
+                    <div style="display: none;" class="card game-card game-card-`
+                    + i +
+                    ` p-3 m-auto" data-index="` + i + `">
+                        <h4 class="card-title text-center my-auto">
+                            `
+                    + value.titulo +
+                    `
+                        </h4>
+                        <button class="btn btn-opt mb-2" data-value="0">
+                            Mito
+                        </button>
+                        <button class="btn btn-opt" data-value="1">
+                            Verdade
+                        </button>
+                    </div>
+                    <div style="display: none;" class="card game-card game-card-`
+                    + i +
+                    `-result p-3 m-auto" >
+                        <h4 class="card-title text-center my-auto">
+                            `
+                    +
+                    (i.verdade ? 'VERDADE' : 'MITO  ') +
+                    `
+                            <br><br>
+                            `
+                    +
+                    value.texto +
+                    `
+                        </h4>
+                        <button class="btn btn-next my-2" data-next="game-card-` + (i + 1) + `">
+                            Próxima Pergunta
+                        </button>
+                        <button class="btn btn-opt">
+                            Voltar
+                        </button>
+                    </div>
+                    `
+                )
+                if (i == questoes.length - 1) {
+                    $('.game-body').append(
+                        `
+                        <div style="display: none;" class="card game-card game-card-`
+                        + (i + 1) +
+                        ` p-3 m-auto" >
+                            <h4 class="card-title text-center my-auto">
+                                VOCÊ COMPLETOU!
+                                <br><br>
+                                Pontuação: X/7
+                            </h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="/jogo1" class="btn btn-opt w-100">
+                                        Refazer teste
+                                    </a>
+                                </div>    
+                                <div class="col-6">
+                                    <a href="/jogo2" class="btn btn-next w-100" data-next="game-card-` + (i + 1) + `">
+                                        Avançar
+                                    </a>
+                                </div>    
+                            </div>
+                        </div>
+                        `
+                    )
+                }
+            });
+        },
+        error: function (request, error) {
+            console.log(error);
+            alert(" Can't do because: " + error);
+        },
+    })
+
+    $(document).on("click", '.btn-next', function () {
+        var next = $(this).data('next');
+        $(this).parent().hide();
+        $('.' + next).show();
+    });
+
+    $(document).on("click", '.btn-opt', function () {
+        var index = $(this).parent().data('index');
+        var resposta = $(this).data('value');
+        console.log(questoes[index]);
+        if (resposta == questoes[index].verdade) {
+            acertos++;
+        }
+        if (index == questoes.length - 1) {
+            $('.game-card-' + (index + 1) + ' h4').html(
+                "VOCÊ COMPLETOU!<br><br>Pontuação: " + acertos + "/7"
+            )
+        }
+        $(this).parent().hide();
+        $('.game-card-' + index + '-result').show();
+    });
+</script>
+
+</html>

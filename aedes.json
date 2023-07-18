@@ -1,0 +1,41 @@
+[
+    {
+        "questoes": [
+            {
+                "titulo": "O mosquito Aedes aegypti só pica de dia?",
+                "verdade": 0,
+                "texto": "O Aedes aegypti tem hábitos diurnos. No interior da residência, ele pode ser encontrado, preferencialmente, em locais sombreados e escuros, como atrás da geladeira, atrás das cortinas, atrás do guarda-roupa. O Aedes pode se alimentar de sangue humano durante o dia inteiro. Por isso, o morador deve arejar a casa, abrir as janelas, ventilar o ambiente, pois o inseto tem fotofobia - aversão à luz. Assim, recomenda-se manter a casa diariamente arejada e clareada. Mas, atenção: se existir algum espécime do vetor dentro de casa, cujo morador passe o dia inteiro fora e inexistir fonte de alimentação, pode ocorrer de o Aedes aegypti picar no período da noite. Ele é um mosquito inteiramente adaptado e adaptável ao meio urbano. Comumente, ele pica durante o dia, mas dependendo da necessidade e do ambiente, ele pode picar à noite também."
+            },
+            {
+                "titulo": "O mosquito Aedes aegypti se reproduz apenas em água limpa?",
+                "verdade": 0,
+                "texto": "Isso é um mito! Nos últimos 20 anos, vem ocorrendo um processo de adaptação biológica no vetor. Hoje, com os altos índices de infestação, a probabilidade da adaptação é alta. Atualmente, já encontramos Aedes em fossas, cisternas, bocas de lobo, ou seja, depósitos que antes não eram explorados pelo mosquito vêm sendo utilizados para a postura dos ovos. É possível encontrar o Aedes aegypti na água suja sim."
+            },
+            {
+                "titulo": "O mosquito Aedes aegypti pode transmitir o vírus HIV?",
+                "verdade": 0,
+                "texto": "Não. Até o presente momento, o Aedes aegypti transmite, comprovadamente, os vírus causadores de dengue, febre amarela urbana, zika e chikungunya. Para que o mosquito se infecte e transmita qualquer vírus, deve haver uma interação específica e o vírus precisa vencer algumas barreiras biológicas como o pH intestinal, que, no mosquito, é básico e inviabiliza a sobrevivência e a replicação do vírus. Além disso, o HIV está presente em baixa concentração no sangue, e o sangue sugado pelo mosquito é em uma quantidade muito pequena."
+            },
+            {
+                "titulo": "Os vírus da dengue, zika e chikungunya podem ser transmitidos entre os mosquitos na cópula?",
+                "verdade": 1,
+                "texto": "Já é comprovada, em ensaios laboratoriais, a transmissão sexual de dengue, zika e chikungunya. Da mesma maneira que a transmissão vertical, a transmissão sexual apresenta uma baixa taxa de transmissão (em torno de 10%), e também não pode ser considerada uma fonte principal de infecção de mosquitos."
+            },
+            {
+                "titulo": "A fêmea do Aedes aegypti, copulando apenas uma vez, pode continuar fazendo postura de ovos o resto de sua vida?",
+                "verdade": 1,
+                "texto": "Após a cópula, as fêmeas armazenam os espermatozoides em uma estrutura denominada espermateca, onde os espermatozoides ficam viáveis e são usados para a fecundação dos ovócitos até o final da vida da fêmea do mosquito."
+            },
+            {
+                "titulo": "Os mosquitos vivem em média dois dias.",
+                "verdade": 0,
+                "texto": "Os mosquitos adultos vivem em média 30 dias, dependendo das condições ambientais e fontes de alimentação."
+            },
+            {
+                "titulo": "As fêmeas de Aedes aegypti, por serem vetores, não são afetadas com a presença do vírus.",
+                "verdade": 0,
+                "texto": "As fêmeas, quando estão infectadas, sofrem alterações em sua biologia e no comportamento, como redução em seu tempo de vida, redução do número de ovos viáveis em suas posturas e aumento de voracidade na alimentação sanguínea."
+            }
+        ]
+    }
+]

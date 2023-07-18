@@ -1,0 +1,95 @@
+body {
+    background-color: #f7f9fc;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 240px;
+    padding: 1.5em;
+    float: left;
+    position: fixed;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.btn-next {
+    color: white;
+    background-color: #035c8c;
+}
+
+.btn-opt {
+    color: #035c8c;
+    border: 1px solid #035c8c;
+}
+
+.btn-back {
+    width: 40px;
+    height: 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    h6 {
+        color: #5c6471;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.game {
+    height: 100vh;
+    padding-top: 1.5em;
+    margin-left: 240px;
+
+    .title {
+        color: #035c8c;
+        font-weight: 600;
+        padding-bottom: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .game-container {
+        padding: 1.5em 1.5em 0 1.5em;
+        height: 100%;
+        background-color: white;
+
+        .game-body {
+            background-color: #dbe0e7;
+            border-radius: 16px 16px 0 0;
+            height: 100%;
+
+            .game-card {
+                width: 400px;
+                height: 520px;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    width: 1em;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #035c8c;
+                    border: 5px solid white;
+                    border-radius: 9999px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+            }
+        }
+    }
+}
