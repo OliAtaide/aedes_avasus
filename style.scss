@@ -4,7 +4,7 @@ body {
 
 .sidebar {
     height: 100vh;
-    width: 240px;
+    max-width: 240px;
     padding: 1.5em;
     float: left;
     position: fixed;
@@ -16,19 +16,19 @@ body {
     border-radius: 4px;
 }
 
-.btn-next {
+.btn-next, .btn-collapse {
     color: white;
     background-color: #035c8c;
+
+    &:hover{
+        color: white;
+        background-color: #555;
+    }
 }
 
-.btn-opt {
+.btn-opt, .btn-back {
     color: #035c8c;
     border: 1px solid #035c8c;
-}
-
-.btn-back {
-    width: 40px;
-    height: 40px;
 }
 
 ul {

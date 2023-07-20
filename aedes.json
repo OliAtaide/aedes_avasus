@@ -37,5 +37,130 @@
                 "texto": "As fêmeas, quando estão infectadas, sofrem alterações em sua biologia e no comportamento, como redução em seu tempo de vida, redução do número de ovos viáveis em suas posturas e aumento de voracidade na alimentação sanguínea."
             }
         ]
+    },
+    {
+        "grupos":[
+            {
+                "letra": "A1",
+                "quanridade": 1
+            },
+            {
+                "letra": "A2",
+                "quantidade": 3
+            },
+            {
+                "letra": "B",
+                "quantidade": 4
+            },
+            {
+                "letra": "C",
+                "quantidade": 5
+            },
+            {
+                "letra": "D1",
+                "quantidade": 2
+            },
+            {
+                "letra": "D2",
+                "quantidade": 5
+            },
+            {
+                "letra": "E",
+                "quantidade": 3
+            }
+        ],
+        "criadouros":[
+            {
+                "titulo": "Prato de vaso de planta",
+                "resposta": "B"
+            },
+            {
+                "titulo": "Caixa d’água elevada",
+                "resposta": "A1"
+            },
+            {
+                "titulo": "Axilas de folhas (Bromélias etc.)",
+                "resposta": "E"
+            },
+            {
+                "titulo":"Buracos em árvores/rochas",
+                "resposta": "E"
+            },
+            {
+                "titulo": "Restos de animais (cascas, carcaças)",
+                "resposta": "E"
+            },
+            {
+                "titulo": "Latas",
+                "resposta": "D2"
+            },
+            {
+                "tiulo": "Recipientes plásticos descartáveis",
+                "resposta": "D2"                
+            },
+            {
+                "titulo": "Garrafas Pet",
+                "resposta": "D2"
+            },
+            {
+                "titulo": "Sucatas",
+                "resposta": "D2"
+            },
+            {
+                "titulo": "Entulho de construção",
+                "resposta": "D2"
+            },{
+                "titulo": "Pneus",
+                "resposta": "D1"
+            },
+            {
+                "titulo": "Câmara de ar",
+                "resposta": "D1"
+            },
+            {
+                "titulo": "Tanques em obras de construção civil, borracharias e hortas",
+                "resposta": "C"
+            },
+            {
+                "titulo": "Calhas, lajes e toldos em desnível",
+                "resposta": "C"
+            },
+            {
+                "titulo": "Ralos",
+                "resposta": "C"
+            },
+            {
+                "titulo": "Cacos de vidro em muros",
+                "resposta": "C"
+            },
+            {
+                "titulo": "Fontes ornamentais fixas",
+                "resposta": "C"
+            },
+            {
+                "titulo": "Recipientes de degelo em geladeiras",
+                "resposta": "B"
+            },
+            {
+                "titulo": "Garrafas retornáveis",
+                "resposta": "B"
+            },
+            {
+                "titulo": "Bebedouros de animais",
+                "resposta": "B"
+            },
+            {
+                "titulo": "Tonel",
+                "resposta": "A2"
+            },
+            {
+                "titulo": "Barril",
+                "resposta": "A2"
+            },
+            {
+                "titulo": "Caixa d’água ao nível do solo",
+                "resposta": "A2"
+            }
+        ]
     }
 ]
