@@ -1,8 +1,46 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 .btn-grupo {
-  margin-bottom: 18px;
+  position: absolute;
 }
 
-.btn-grupo, .input-criadouro {
+.col-criadouro {
+  position: relative;
+}
+
+.col-grupo {
+  height: 36px;
+  margin-bottom: 18px;
+  z-index: 99;
+}
+
+.close-container {
+  position: relative;
+  left: 0;
+  width: 36px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-criadouro:has(.ui-dropped) .close-container::after {
+  font-family: "bootstrap-icons";
+  content: "\f62a";
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  cursor: pointer;
+  border: 2px solid #035c8c;
+  color: #035c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-grupo,
+.input-criadouro {
   width: 36px;
   height: 36px;
   margin-left: auto;
@@ -14,18 +52,20 @@
 
 .input-criadouro {
   background-color: white;
-  border: 2px solid #035C8C;
+  border: 2px solid #035c8c;
   border-radius: 4px;
   text-align: center;
   font-weight: 600;
   font-size: 20px;
 }
 
-.btn-grupo, .ui-dropped {
+.btn-grupo,
+.ui-dropped {
   color: white;
   background-color: #035c8c;
 }
-.btn-grupo:hover, .ui-dropped:hover {
+.btn-grupo:hover,
+.ui-dropped:hover {
   color: white;
   background-color: #555;
 }

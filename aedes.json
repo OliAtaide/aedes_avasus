@@ -39,10 +39,10 @@
         ]
     },
     {
-        "grupos":[
+        "grupos": [
             {
                 "letra": "A1",
-                "quanridade": 1
+                "quantidade": 1
             },
             {
                 "letra": "A2",
@@ -69,7 +69,7 @@
                 "quantidade": 3
             }
         ],
-        "criadouros":[
+        "criadouros": [
             {
                 "titulo": "Prato de vaso de planta",
                 "resposta": "B"
@@ -83,7 +83,7 @@
                 "resposta": "E"
             },
             {
-                "titulo":"Buracos em árvores/rochas",
+                "titulo": "Buracos em árvores/rochas",
                 "resposta": "E"
             },
             {
@@ -96,7 +96,7 @@
             },
             {
                 "tiulo": "Recipientes plásticos descartáveis",
-                "resposta": "D2"                
+                "resposta": "D2"
             },
             {
                 "titulo": "Garrafas Pet",
@@ -109,7 +109,8 @@
             {
                 "titulo": "Entulho de construção",
                 "resposta": "D2"
-            },{
+            },
+            {
                 "titulo": "Pneus",
                 "resposta": "D1"
             },
