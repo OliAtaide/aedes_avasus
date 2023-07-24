@@ -163,5 +163,117 @@
                 "resposta": "A2"
             }
         ]
+    },
+    {
+        "grupos":[
+            "A1", "A2", "B", "C", "D1", "D2", "E"
+        ],
+        "botoes":[
+            {
+                "texto": "Caixa d’ água elevada ligada à rede pública e/ou sistema de abastecimento particular (poço, cisterna, mina)",
+                "grupo": "A1",
+                "tipo": 1
+            },
+            {
+                "texto": "Depósitos em obras e horticultura. Depósitos ao nível do solo para armazenar depósitos de barros (filtros, moringas, potes) mento doméstico: tonel, tambor, barril, tina,  cisternas, caixa d’água, capitação de água (poço, cacimba)",
+                "grupo": "A2",
+                "tipo": 1
+            },
+            {
+                "texto": "Vasos/frascos com água, prato, pingadeira, recipiente de degelo de refrigeradores, bebedouros, pequenas fontes ornamentais",
+                "grupo": "B",
+                "tipo": 1
+            },
+            {
+                "texto": "Calhas, ralos, sanitários (em desuso), tanques em obras/borracharias, máquinas/equip. em pátios, piscinas e fontes ornamentais, floreiras em cemitérios, cacos de vidro em muros.",
+                "grupo": "C",
+                "tipo": 1
+            },
+            {
+                "texto": "Pneus e outros materiais rodantes (câmera de ar, manchões).",
+                "grupo": "D1",
+                "tipo": 1
+            },
+            {
+                "texto": "Lixo (recipientes plásticos, latas) sucatas em pátios e ferro velhos, entulhos.",
+                "grupo": "D2",
+                "tipo": 1
+            },
+            {
+                "texto": "Folhas de bromélias, ocos em árvores, buracos em rochas, restos de animais cascas, carapaças",
+                "grupo": "E",
+                "tipo": 1
+            },
+            {
+                "texto": "Articulação com a empresa de abastecimento de água visando ampliar a rede e regularizar o fornecimento.",
+                "grupo": "A1",
+                "tipo": 2
+            },
+            {
+                "texto": "Articulação com a empresa de abastecimento de água visando ampliar a rede e regularizar o fornecimento.",
+                "grupo": "A2",
+                "tipo": 2
+            },
+            {
+                "texto": "Articulação com o setor de comunicação para elaboração de campanhaslocais de educação em saúde.",
+                "grupo": "B",
+                "tipo": 2
+            },
+            {
+                "texto": "Articulação com a Secretaria de Ura elaboração e aprovação de código banização e Legislativo para garantir de postura municipal que oriente a construção de imóveis protegidos dos fatores que propiciam a infestação por Aedes Aegypti.",
+                "grupo": "C",
+                "tipo": 2
+            },
+            {
+                "texto": "Garantir o cumprimento das resoluções Conama 258/99 e 301/02 e articular com as empresas produto-ras o recolhimento dos pneumáticos inservíveis.",
+                "grupo": "D1",
+                "tipo": 2
+            },
+            {
+                "texto": "Articulação com o serviço de Limpeza Urbana a ampliação e regularização da coleta de resíduos de sólidos.",
+                "grupo": "D2",
+                "tipo": 2
+            },
+            {
+                "texto": "Articulação com o setor de comunicação para elaboração de campanhas locais de educação em saúde. Articular com o serviço de Limpeza Urbana o pronto recolhimento dos restos de animais.",
+                "grupo": "E",
+                "tipo": 2
+            },
+            {
+                "texto": "Orientar quanto à cobertura ou vedação. Em caso de reincidência, notificar. Tratar como última alternativa.",
+                "grupo": "A1",
+                "tipo": 3
+            },
+            {
+                "texto": "Quando indispensáveis, orientar quanto à cobertura, vedação e lavagem, caso contrário descartar. Em caso de reincidência, notificar. Tratar como última alternativa",
+                "grupo": "A2",
+                "tipo": 3
+            },
+            {
+                "texto": "Orientar para vistoria/lavagem com freqüência; proteção, colocação de areia. Não tratar.",
+                "grupo": "B",
+                "tipo": 3
+            },
+            {
+                "texto": "Orientar para conserto de calhas/lages e toldos, vedação de sanitários e ralos em desuso, lavagem com freqüência; proteção; preenchimento com areia. Tratar em última alternativa.",
+                "grupo": "C",
+                "tipo": 3
+            },
+            {
+                "texto": "Instruir para que sejam encaminhados para descarte adequado, se indispensáveis, proteger. Tratar como última alternativa.",
+                "grupo": "D1",
+                "tipo": 3
+            },
+            {
+                "texto": "Lixo/entulho: instruir sobre destino adequado. Não tratar. Sucatas em PE e pátios, se indispensáveis, proteger sob cobertura. Tratamento químico conforme indicado",
+                "grupo": "D2",
+                "tipo": 3
+            },
+            {
+                "texto": "Instruir para evitar acúmulo de água em folhas. Tampar buracos em árvores. Encaminhar para destino adequado. Não tratar.",
+                "grupo": "E",
+                "tipo": 3
+            }
+        ]
     }
 ]

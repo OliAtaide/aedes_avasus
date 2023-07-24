@@ -1,0 +1,55 @@
+.table .titulo_grupos {
+  width: 10%;
+}
+.table .titulo_depositos,
+.table .titulo_intersetoriais,
+.table .titulo_imediata {
+  width: 30%;
+}
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.row-grupos {
+  width: 100%;
+}
+
+textarea,
+.btn-grupo-texto {
+  aspect-ratio: 4/3;
+  background-color: #f7f9fc;
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+textarea {
+  text-align: center;
+}
+
+.btn-grupo {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  margin-bottom: 0.5em;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #035c8c;
+}
+.btn-grupo:hover {
+  color: white;
+  background-color: #555;
+}
+
+.btn-grupo-texto .btn {
+  font-size: 14px;
+  height: 100%;
+}
+
+/*# sourceMappingURL=jogo3.css.map */

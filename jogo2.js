@@ -3,7 +3,7 @@ var criadouros = [];
 function imprimirGrupo(index, letra) {
     return ('<div data-index=' + index +
         ' data-value=' + letra +
-        ' class="btn btn-grupo">'
+        ' class="btn btn-grupo btn-grupo-'+ letra +'">'
         + letra + '</div>')
 }
 
@@ -16,7 +16,6 @@ function printQuestoes() {
             criadouros = _data[1].criadouros;
             _data[1].grupos.forEach(function (value, i) {
                 var content = '';
-                console.log(value.quantidade)
                 for (let j = 0; j < value.quantidade; j++) {
                     content += imprimirGrupo(i, value.letra)
                 }
@@ -29,11 +28,11 @@ function printQuestoes() {
             $('.btn-grupo').draggable();
 
             _data[1].criadouros.forEach(function (value, i) {
-                $('.row-criadouros').append(
+                $('.row-criadouros').prepend(
                     `
                     <div class="col-3 col-criadouro">
                         <div class="flex-criadouro d-flex flex-column justify-content-center">
-                            <p class="text-center">`
+                            <p class="text-center my-2">`
                     + value.titulo +
                     `
                             </p>
@@ -52,7 +51,6 @@ function printQuestoes() {
                 accept: ".btn-grupo",
                 tolerance: "pointer",
                 drop: function (event, ui) {
-                    console.log($(this), ui.draggable.data("value"));
                     $(this).val(ui.draggable.data("value"));
                     $(this).addClass('ui-dropped')
                     ui.draggable.remove()
@@ -68,13 +66,12 @@ function printQuestoes() {
 
 $(document).on('click', '.close-container', function () {
     var input = $(this).parent().find('input');
-    console.log($('.col-grupo-' + input.val()));
     $('.col-grupo-' + input.val()).append(
         imprimirGrupo(input.data('index'), input.val())
     )
+    $('.btn-grupo-' + input.val()).draggable();
     input.val('');
     input.removeClass('ui-dropped');
 })
 
 printQuestoes();
-
