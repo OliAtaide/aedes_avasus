@@ -46,9 +46,22 @@ body {
 }
 
 .btn-opt,
-.btn-back {
+.btn-back,
+.btn-bordered {
   color: #035c8c;
   border: 1px solid #035c8c;
+}
+.btn-opt:hover,
+.btn-back:hover,
+.btn-bordered:hover {
+  color: #5c6471;
+  border: 2px solid #5c6471;
+}
+.btn-opt:active,
+.btn-back:active,
+.btn-bordered:active {
+  background-color: #5c6471 !important;
+  color: white !important;
 }
 
 ul {
@@ -62,25 +75,20 @@ ul h6 {
 }
 
 .game {
-  height: 100vh;
-  padding-top: 1.5em;
   width: 100%;
 }
 .game .title {
   color: #035c8c;
   font-weight: 600;
-  padding-bottom: 1.5em;
-  padding-right: 1.5em;
+  padding: 1.5em;
 }
 .game .game-container {
   padding: 1.5em 1.5em 0 1.5em;
-  height: 100%;
   background-color: white;
 }
 .game .game-container .game-body {
   background-color: #dbe0e7;
   border-radius: 16px 16px 0 0;
-  height: 100%;
 }
 .game .game-container .game-body .game-card {
   width: 400px;

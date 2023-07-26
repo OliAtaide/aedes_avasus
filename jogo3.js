@@ -21,25 +21,34 @@ function printInputs() {
                 $('tbody').append(
                     '<tr><th>'
                     + value +
-                    '</th><td><textarea disabled></textarea></td><td><textarea disabled></textarea></td><td><textarea disabled></textarea></td></tr>'
+                    '</th><td>' +
+                    '<button data-grupo=' + value + ' data-tipo=1 class="btn-input" disabled></button>' + '</td><td>' +
+                    '<button data-grupo=' + value + ' data-tipo=2 class="btn-input" disabled></button>' + '</td><td>' +
+                    '<button data-grupo=' + value + ' data-tipo=3 class="btn-input" disabled></button>' + '</td></tr>'
                 )
             })
 
-            $('textarea').droppable({
+            $('.btn-input').droppable({
                 accept: ".btn",
                 tolerance: "pointer",
                 drop: function (event, ui) {
-                    var index = ui.draggable.data("index");
-                    console.log(index);
-                    $(this).val(botoes[index].texto);
-                    $(this).addClass('ui-dropped')
-                    ui.draggable.remove()
+                    if (!$(this).hasClass('ui-dropped')) {
+                        var index = ui.draggable.data("index");
+
+                        $(this).val(index);
+                        $(this).html(botoes[index].texto);
+                        $(this).addClass('ui-dropped')
+
+                        var btn = $('.row-grupos .col-2:nth-child(' + (index + 1) + ') button')
+                        btn.prop('disabled', true)
+
+                        ui.draggable.remove()
+                    }
                 }
             });
         },
         error: function (request, error) {
             console.log(error);
-            alert(" Can't do because: " + error);
         },
     })
 }
@@ -53,4 +62,26 @@ $(document).on('click', '.btn-grupo', function () {
     $('.btn-grupo-texto .btn').draggable();
 })
 
-printInputs()
+$(document).on('click', '.btn-verif', function () {
+    if ($('.ui-dropped').length, (grupos.length * 3)) {
+        $('.ui-dropped').each(function (value, i) {
+            console.log($(this).data('grupo'))
+            var botao = botoes[$(this).val()]
+            var grupo = $(this).data('grupo')
+            var tipo = $(this).data('tipo')
+            if (grupo == botao.grupo && tipo == botao.tipo) {
+                $(this).addClass('ui-right');
+            }
+            else {
+                $(this).addClass('ui-wrong');
+            }
+        });
+    }
+
+})
+
+var height = $(window).height() - $('.table').offset().top;
+
+$('.table').height(height)
+
+printInputs();

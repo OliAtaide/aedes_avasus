@@ -1,3 +1,12 @@
+.col-inputs {
+  height: auto;
+  overflow: hidden;
+}
+
+.table {
+  overflow-y: auto;
+  display: block;
+}
 .table .titulo_grupos {
   width: 10%;
 }
@@ -10,25 +19,33 @@
   text-align: center;
   vertical-align: middle;
 }
+.table th, .table td {
+  border: none;
+  outline: none;
+}
 
 .row-grupos {
   width: 100%;
 }
 
-textarea,
+.btn-input,
 .btn-grupo-texto {
   aspect-ratio: 4/3;
   background-color: #f7f9fc;
+  color: black;
   width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.btn-input {
+  text-align: center;
   outline: none;
   border: none;
   resize: none;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-textarea {
-  text-align: center;
+  font-weight: 400;
+  height: auto;
 }
 
 .btn-grupo {
@@ -50,6 +67,14 @@ textarea {
 .btn-grupo-texto .btn {
   font-size: 14px;
   height: 100%;
+}
+
+.ui-wrong {
+  background-color: #FF6058;
+}
+
+.ui-right {
+  background-color: #27CA40;
 }
 
 /*# sourceMappingURL=jogo3.css.map */
