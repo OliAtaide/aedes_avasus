@@ -95,6 +95,8 @@ $(document).on('click', '.card-criadouro .btn-feedback', function () {
 })
 
 const success = new bootstrap.Modal('#successModal', {
+    backdrop: 'static',
+    keyboard: false
 })
 
 $(document).on('click', '.btn-verif', function () {

@@ -62,8 +62,15 @@ $(document).on('click', '.btn-grupo', function () {
     $('.btn-grupo-texto .btn').draggable();
 })
 
+const success = new bootstrap.Modal('#successModal', {
+    backdrop: 'static',
+    keyboard: false
+})
+
 $(document).on('click', '.btn-verif', function () {
     if ($('.ui-dropped').length == (grupos.length * 3)) {
+        var acertos = 0;
+
         $('.ui-dropped').each(function (value, i) {
             console.log($(this).data('grupo'))
             var botao = botoes[$(this).val()]
@@ -71,14 +78,17 @@ $(document).on('click', '.btn-verif', function () {
             var tipo = $(this).data('tipo')
             if (grupo == botao.grupo && tipo == botao.tipo) {
                 $(this).addClass('ui-right');
+                acertos++;
             }
             else {
                 $(this).addClass('ui-wrong');
             }
         });
-        
+        if (acertos == (grupos.length * 3)) {
+            success.show();
+        }
     }
-    
+
     $('.btn-verif').hide();
     $('.btn-retry').show();
     //}
@@ -106,7 +116,3 @@ var height = $(window).height() - $('.table').offset().top;
 $('.table').height(height)
 
 printInputs();
-
-const success = new bootstrap.Modal('#successModal', {
-})
-success.show();
