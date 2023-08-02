@@ -2,7 +2,7 @@ var grupos, botoes;
 
 function printInputs() {
     $.ajax({
-        url: './aedes.json',
+        url: '../scripts/aedes.json',
         dataType: "json",
         type: 'GET',
         success: function (_data) {

@@ -3,7 +3,7 @@ var acertos = 0;
 
 function printQuestoes(num) {
     $.ajax({
-        url: './aedes.json',
+        url: '../scripts/aedes.json',
         dataType: "json",
         type: 'GET',
         success: function (_data) {
