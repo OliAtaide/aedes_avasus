@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz: Mitos e verdades sobre o Aedes aegypti</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -18,7 +18,7 @@
         <div class="d-flex w-100 justify-content-end">
             <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth"
                 aria-expanded="true" aria-controls="collapseWidth">
-                
+
             </button>
         </div>
         <div class="collapse collapse-horizontal show h-100" id="collapseWidth">
@@ -64,6 +64,32 @@
         </div>
         <div class="game-container">
             <div class="game-body d-flex">
+                <div id="successModal" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered game-card">
+                        <div class="modal-content p-3">
+                            <h4 class="card-title text-center my-auto">
+                                VOCÊ COMPLETOU!
+                                <br><br>
+                                <p>
+                                    Pontuação: X/23
+                                </p>
+                            </h4>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a href="" class="btn btn-bordered w-100">
+                                        Refazer teste
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="jogo3.html" class="btn btn-next w-100" data-next="game-card-0">
+                                        Avançar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="card game-card p-3 m-auto" style="display: none;">
                     <h4 class="card-title text-center my-auto">
                         Ao iniciar o nosso Quiz, você deverá ler as sentenças a respeito do mosquito Aedes aegypti e
@@ -74,7 +100,7 @@
                         Iniciar Atividade
                     </button>
                 </div>
-                <div class="card card-criadouro mx-4 w-100 p-3 m-auto">
+                <div class="card card-criadouro m-4 w-100 p-3">
                     <h4 class="card-title text-center my-auto"></h4>
                     <div class="row">
                         <div class="col-2">
@@ -91,16 +117,87 @@
                             <div class="row row-criadouros">
                                 <div class="col-3">
                                     <div class="d-flex flex-column mt-3">
-                                        <button class="btn btn-opt mb-3">
+                                        <button class="btn btn-bordered btn-verif mb-3">
                                             Verificar
                                         </button>
-                                        <button class="btn btn-opt">
+                                        <button class="btn btn-bordered btn-feedback">
                                             Feedback
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="card card-feedback m-4 p-5" style="display: none;">
+                    <h5 class="text-center">
+                        Feedback
+                    </h5>
+                    <hr>
+                    <h5>
+                        Criadouros do tipo A:
+                    </h5>
+                    <p>
+                        Os criadouros do tipo A são utilizados para armazenamento e consumo de água. Nessa avaliação,
+                        estão
+                        representados por: caixa d'água elevada, tonel, barril e caixas d'água ao nível do solo. A caixa
+                        d'água elevada é do tipo A1, pois é um depósito de água elevado, ligado à rede pública e/ou ao
+                        sistema de captação mecânica em poço, cisterna ou mina d'água. Já o tonel, o barril e a caixa
+                        d'água
+                        ao nível do solo são do tipo A2, pois são depósitos para armazenamento de água ao nível do solo.
+                    </p>
+
+                    <h5>
+                        Criadouros do tipo B:
+                    </h5>
+                    <p>
+                        Os criadouros do tipo B são depósitos de água móveis, sendo representados, nesse exemplo, por
+                        prato
+                        de vaso de planta, recipientes de degelo em geladeiras, garrafas retornáveis e bebedouros de
+                        animais. Temos ainda: bebedouros em geral, pequenas fontes ornamentais e materiais em depósitos
+                        de
+                        construção (sanitários estocados, canos etc.).
+                    </p>
+
+                    <h5>
+                        Criadouros do tipo C:
+                    </h5>
+                    <p>
+                        Os criadouros do tipo C são os depósitos de água fixos, que não podem ser removidos. Na
+                        avaliação,
+                        temos exemplificados os criadouros: piscinas, tanques em obras de construção civil, borracharias
+                        e
+                        hortas, calhas, lajes e toldos em desnível, cacos de vidro em muros, ralos e fontes ornamentais
+                        fixas. Lembrando que as piscinas só são criadouros quando não tratadas. Outros exemplos são:
+                        adornos
+                        arquitetônicos (caixas de inspeção/passagens) e sanitários em desuso.
+                    </p>
+
+                    <h5>
+                        Criadouros do tipo D:
+                    </h5>
+                    <p>
+                        Os criadouros do tipo D são os que podem ser retirados do ambiente, sendo divididos em dois
+                        subgrupos para se conhecer e destacar a importância: D1 são pneus e materiais rodantes, uma vez
+                        que
+                        o descarte/remoção deve ser diferenciado. O subgrupo D2 são os resíduos sólidos, representados
+                        na
+                        avaliação acima por latas, recipientes plásticos descartáveis, garrafas Pet, sucatas e entulhos
+                        de
+                        construção.
+                    </p>
+
+                    <h5>
+                        Criadouros do tipo E:
+                    </h5>
+                    <p>
+                        Os criadouros do tipo E são os naturais. Na avaliação, estão representados por: axilas de folhas
+                        (ex. bromélias), buracos em árvores/rochas e restos de animais (cascas, carcaças).
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-back w-50">
+                            Voltar
+                        </button>
                     </div>
                 </div>
             </div>
