@@ -67,7 +67,7 @@ function printQuestoes(num) {
                                         </a>
                                     </div>    
                                     <div class="col-6">
-                                        <a href="/jogo2.html" class="btn btn-next w-100" data-next="game-card-` + (i + 1) + `">
+                                        <a href="jogo2.html" class="btn btn-next w-100" data-next="game-card-` + (i + 1) + `">
                                             Avançar
                                         </a>
                                     </div>    

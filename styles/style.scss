@@ -18,16 +18,17 @@ body {
     z-index: 99;
     background-color: #f7f9fc;
     top: 0;
+     
+    .btn-collapse::after {
+        font-family: "bootstrap-icons";
+        content: "\F284";
+    }
+    
+    .btn-collapse.collapsed::after {
+        content: "\F285";
+    }
 }
 
-.btn-collapse::after {
-    font-family: "bootstrap-icons";
-    content: "\F284";
-}
-
-.btn-collapse.collapsed::after {
-    content: "\F285";
-}
 
 .btn {
     font-weight: 600;
