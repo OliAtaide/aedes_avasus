@@ -7,8 +7,16 @@
     position: relative;
 }
 
-.flex-criadouro{
-    height: 100%;
+.flex-criadouro {
+    min-height: 100%;
+    
+}
+
+.col-grupos{
+    hr{
+        border-color: #035c8c;
+        opacity: 1;
+    }
 }
 
 .col-grupo {
@@ -62,13 +70,13 @@
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-    margin-top: auto;
+//    margin-top: auto;
 }
 
-.card-feedback{
+.card-feedback {
     font-size: 20px;
 
-    h5{
+    h5 {
         font-weight: 600;
     }
 }
@@ -84,6 +92,34 @@
     }
 }
 
-.ui-dropped{
+.ui-dropped {
     border: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    .card-criadouro{
+        margin-bottom: 11em !important;
+    }
+
+    .col-grupos {
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        background-color: #f7f9fc;
+        left: 5%;
+        bottom: 0;
+        width: 90%;
+        border-radius: 16px 16px 0;
+
+        .card-title {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .row-grupos {
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+    }
 }
