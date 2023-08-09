@@ -19,7 +19,8 @@
   text-align: center;
   vertical-align: middle;
 }
-.table th, .table td {
+.table th,
+.table td {
   border: none;
   outline: none;
 }
@@ -67,6 +68,52 @@
 .btn-grupo-texto .btn {
   font-size: 14px;
   height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    overflow: visible;
+  }
+  .table .btn-input {
+    border: 1px solid #035c8c;
+    width: 24px;
+    height: 24px;
+  }
+  .table th,
+  .table td {
+    font-size: 14px;
+    width: 25% !important;
+    padding-left: 0;
+  }
+  .table th:first-child,
+  .table td:first-child {
+    width: 20% !important;
+  }
+  .table th:last-child,
+  .table td:last-child {
+    padding-right: 0;
+  }
+  .table tr td button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-weight: 800;
+  }
+  .card-criadouro {
+    margin: 0.5em !important;
+    padding: 0.5em !important;
+  }
+  .row-grupos {
+    margin: 1em 0;
+  }
+  .btn-grupo-texto {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=jogo3.css.map */

@@ -1,5 +1,7 @@
 var grupos, botoes;
 
+var current_index = -1;
+
 function printInputs() {
     $.ajax({
         url: '../scripts/aedes.json',
@@ -22,9 +24,9 @@ function printInputs() {
                     '<tr><th>'
                     + value +
                     '</th><td>' +
-                    '<button data-grupo=' + value + ' data-tipo=1 class="btn-input" disabled></button>' + '</td><td>' +
-                    '<button data-grupo=' + value + ' data-tipo=2 class="btn-input" disabled></button>' + '</td><td>' +
-                    '<button data-grupo=' + value + ' data-tipo=3 class="btn-input" disabled></button>' + '</td></tr>'
+                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=1 class="btn-input"></button>' + '</td></div>/<td>' +
+                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=2 class="btn-input"></button>' + '</td></div><td>' +
+                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=3 class="btn-input"></button>' + '</td></div></tr>'
                 )
             })
 
@@ -60,7 +62,33 @@ $(document).on('click', '.btn-grupo', function () {
         + '</div>'
     )
     $('.btn-grupo-texto .btn').draggable();
+    current_index = $(this).data('index');
 })
+
+// mobile
+
+$(document).on('click', '.btn-input', function () {
+    console.log(current_index);
+    if (current_index != -1 && !$(this).hasClass('ui-dropped')) {
+        $(this).val(current_index);
+        $(this).html(
+            '<div class ="d-sm-none">' + (current_index + 1) +
+            '</div><div class="d-none d-sm-block">' +
+            botoes[current_index].texto +
+            '</div>'
+        );
+        $(this).addClass('ui-dropped')
+
+        var btn = $('.col-grupo:nth-child(' + (current_index + 1) + ') button')
+        btn.prop('disabled', true)
+
+        //ui.draggable.remove();
+
+        current_index = -1;
+    }
+})
+
+//
 
 const success = new bootstrap.Modal('#successModal', {
     backdrop: 'static',
@@ -111,8 +139,8 @@ $(document).on('click', '.btn-retry', function () {
     })
 })
 
-var height = $(window).height() - $('.table').offset().top;
+//var height = $(window).height() - $('.table').offset().top;
 
-$('.table').height(height)
+//$('.table').height(height)
 
 printInputs();

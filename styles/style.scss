@@ -135,3 +135,53 @@ ul {
 .modal-content{
     height: 520px;
 }
+
+@media screen and (max-width: 600px){
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        position: relative;
+        max-width: 100%;
+
+        img{
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .sidebar, .sidebar .h-100{
+        height: auto !important;
+    }
+
+    .sidebar, .title, .game-container{
+        padding: 1em !important;
+    }
+
+    .btn-collapse::after {
+        content: "\F286" !important;
+    }
+    
+    .btn-collapse.collapsed::after {
+        content: "\F282" !important;
+    }
+
+    .game{
+
+        .title{
+            font-size: 18px;
+            text-align: left !important;
+        }
+
+        .game-card{
+            margin-left: 1em !important;
+            margin-right: 1em !important;
+
+            .card-title{
+                overflow: visible;
+            }
+        }
+    }
+}
