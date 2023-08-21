@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: #035c8c;
+  background-color: var(--color1);
 }
 .btn-grupo:hover {
   color: white;
@@ -78,7 +78,7 @@
     overflow: visible;
   }
   .table .btn-input {
-    border: 1px solid #035c8c;
+    border: 1px solid var(--color1);
     width: 24px;
     height: 24px;
   }

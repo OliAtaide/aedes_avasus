@@ -12,7 +12,7 @@
 }
 
 .col-grupos hr {
-  border-color: #035c8c;
+  border-color: var(--color1);
   opacity: 1;
 }
 
@@ -43,8 +43,8 @@
     height: 12px;
     background-color: white;
     cursor: pointer;
-    border: 2px solid #035c8c;
-    color: #035c8c;
+    border: 2px solid var(--color1);
+    color: var(--color1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@
 
 .input-criadouro {
   background-color: white;
-  border: 2px solid #035c8c;
+  border: 2px solid var(--color1);
   border-radius: 4px;
   text-align: center;
   font-weight: 600;
@@ -80,7 +80,7 @@
 .btn-grupo,
 .ui-dropped {
   color: white;
-  background-color: #035c8c;
+  background-color: var(--color1);
 }
 .btn-grupo:hover,
 .ui-dropped:hover {

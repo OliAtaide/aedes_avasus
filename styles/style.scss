@@ -5,6 +5,10 @@
     font-family: "Inter", sans-serif;
 }
 
+:root{
+    --color1: #B96C2C;
+}
+
 body {
     background-color: #f7f9fc;
     display: flex;
@@ -39,7 +43,7 @@ body {
 .btn-next,
 .btn-collapse {
     color: white;
-    background-color: #035c8c;
+    background-color: var(--color1);
 
     &:hover {
         color: white;
@@ -50,8 +54,8 @@ body {
 .btn-opt,
 .btn-back,
 .btn-bordered {
-    color: #035c8c;
-    border: 1px solid #035c8c;
+    color: var(--color1);
+    border: 1px solid var(--color1);
 
     &:hover {
         color: #5c6471;
@@ -79,7 +83,7 @@ ul {
     width: 100%;
 
     .title {
-        color: #035c8c;
+        color: var(--color1);
         font-weight: 600;
         padding: 1.5em;
     }
@@ -110,7 +114,7 @@ ul {
 
                 /* Handle */
                 &::-webkit-scrollbar-thumb {
-                    background: #035c8c;
+                    background: var(--color1);
                     border: 5px solid white;
                     border-radius: 9999px;
                 }
