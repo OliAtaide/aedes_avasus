@@ -3,18 +3,30 @@
     overflow: hidden;
 }
 
+.card-title{
+    font-size: 20px !important;
+    font-weight: 600;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ebebeb;
+}
+
+.col-sm-2{
+    border-right: 2px solid #ebebeb;
+}
+
 .table {
     overflow-y: auto;
     display: block;
 
-    .titulo_grupos {
-        width: 10%;
+    .titulo_grupos,
+    .titulo_subgrupos {
+        width: 12.5%;
     }
 
     .titulo_depositos,
     .titulo_intersetoriais,
     .titulo_imediata {
-        width: 30%;
+        width: 25%;
     }
 
     th {

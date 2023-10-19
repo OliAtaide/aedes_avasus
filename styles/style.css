@@ -1,11 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
 }
 
 :root {
-  --color1: #B96C2C;
+  --color1: #5c6370;
 }
 
 body {
@@ -79,23 +79,22 @@ ul h6 {
 .game {
   width: 100%;
 }
-.game .title {
+.game .title, .game .subtitle {
   color: var(--color1);
-  font-weight: 600;
-  padding: 1.5em;
+}
+.game .title {
+  padding: 1em;
 }
 .game .game-container {
-  padding: 1.5em 1.5em 0 1.5em;
-  background-color: white;
-}
-.game .game-container .game-body {
-  background-color: #dbe0e7;
-  border-radius: 16px 16px 0 0;
+  background-color: #a5adbb;
 }
 .game .game-container .game-body .game-card {
-  width: 400px;
-  height: 520px;
+  width: 50%;
+  padding: 24px;
+  gap: 40px;
   overflow-y: auto;
+  border-radius: 12px;
+  min-height: 380px;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -116,15 +115,22 @@ ul h6 {
 }
 
 .ui-wrong {
-  background-color: #FF6058 !important;
+  background-color: #ff6058 !important;
 }
 
 .ui-right {
-  background-color: #27CA40 !important;
+  background-color: #27ca40 !important;
 }
 
 .modal-content {
   height: 520px;
+}
+
+.footer {
+  height: 80px;
+}
+.footer img {
+  height: 48px;
 }
 
 @media screen and (max-width: 600px) {
@@ -140,10 +146,13 @@ ul h6 {
     margin-left: auto;
     margin-right: auto;
   }
-  .sidebar, .sidebar .h-100 {
+  .sidebar,
+  .sidebar .h-100 {
     height: auto !important;
   }
-  .sidebar, .title, .game-container {
+  .sidebar,
+  .title,
+  .game-container {
     padding: 1em !important;
   }
   .btn-collapse::after {

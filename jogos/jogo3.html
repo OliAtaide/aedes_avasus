@@ -13,56 +13,29 @@
 </head>
 
 <body>
-    <nav class="sidebar d-flex flex-column">
-        <div class="d-flex w-100 justify-content-end">
-            <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth"
-                aria-expanded="true" aria-controls="collapseWidth">
-
-            </button>
-        </div>
-        <div class="collapse show h-100" id="collapseWidth">
-            <div class="d-flex flex-column h-100">
-                <ul>
-                    <li class="my-2">
-                        <h6>
-                            UNIDADE 2
-                        </h6>
-                        <p>
-                            Biologia e Morfologia
-                            dos Vetores
-                        </p>
-                    </li>
-                    <li class="my-2">
-                        <h6>
-                            Módulo
-                        </h6>
-                        <p>
-                            Biologia, monitoramento
-                            e controle de Aedes aegypti
-                        </p>
-                    </li>
-                    <li class="my-2">
-                        <h6>
-                            Conteudistas
-                        </h6>
-                        <p>
-                            Renata Antonaci Gama
-                            <br>
-                            Taciano de Moura Barbosa
-                        </p>
-                    </li>
-                </ul>
-                <img class="mt-auto" src="../imgs/avasus_logo.svg" alt="">
-                <img class="mt-3" src="../imgs/ellipsis.svg" alt="">
-            </div>
-        </div>
-    </nav>
     <div class="game">
         <div class="title w-100 text-end">
-            Quiz: Mitos e verdades sobre o Aedes aegypti
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-start">
+                        <strong>Módulo:</strong> Biologia, monitoramento e controle de Aedes aegypti
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 text-start">
+                        <strong>Unidade 5:</strong> Controle de Aegypti no Brasil
+                    </div>
+                    <div class="col-sm-6">
+                        <strong>Conteúdistas:</strong> Renata Antonaci Gama e Taciano de Moura Barbosa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle py-2 text-center fw-bold bg-white">
+            QUIZ: Mitos e Verdades sobre o Aedes Aegypt
         </div>
         <div class="game-container">
-            <div class="game-body d-flex">
+            <div class="container game-body d-flex">
                 <div id="successModal" class="modal fade">
                     <div class="modal-dialog modal-dialog-centered game-card">
                         <div class="modal-content p-3">
@@ -94,28 +67,27 @@
                         Iniciar Atividade
                     </button>
                 </div>
-                <div class="card card-criadouro m-4 w-100 p-3">
+                <div class="card card-criadouro m-4 w-100 p-3 d-flex">
                     <h4 class="card-title text-center m-3">
-                        Clique em um dos números baixo para gerar um cartão de texto.
-                        <br>
-                        Clique em uma das caixas abaixo para associaro conteúdo à sua respectiva coluna.
-                        <br>
-                        Depois que terminar, clique em “Verificar” para saber quais você acertou.
+                        Clique em um dos números abaixo para gerar um cartão de texto. Arraste-o para associar o conteúdo abaixo a sua respectiva coluna. Depois que terminar, clique em “Verificar” para saber quais você acertou.
                     </h4>
                     <div class="row">
-                        <div class="col-sm-3 col-grupos">
+                        <div class="col-sm-2 col-grupos">
                             <div class="row row-grupos">
 
                             </div>
                             <div class="btn-grupo-texto">
                             </div>
                         </div>
-                        <div class="col-sm-9 col-inputs">
+                        <div class="col-sm col-inputs">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th class="titulo_grupos">
                                             Grupo
+                                        </th>
+                                        <th class="titulo_subgrupos">
+                                            Subgrupo
                                         </th>
                                         <th class="titulo_depositos">
                                             Tipos de Recipiente/
@@ -130,7 +102,73 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr class="A1">
+                                        <th rowspan="2" class="border-bottom">
+                                            A
+                                            <br>
+                                            Armazenamento
+                                            de água
+                                        </th>
+                                        <th>
+                                            A1
+                                        </th>
+                                    </tr>
+                                    <tr class="A2">
+                                        <th class="border-bottom">
+                                            A2
+                                        </th>
+                                    </tr>
+                                    <tr class="B">
+                                        <th class="border-bottom">
+                                            B
+                                            <br>
+                                            Pequenos
+                                            depósitos
+                                            móveis
+                                        </th>
+                                        <th class="border-bottom">
 
+                                        </th>
+                                    </tr>
+                                    <tr class="C">
+                                        <th class="border-bottom">
+                                            C
+                                            <br>
+                                            Depósitos
+                                            fixos
+                                        </th>
+                                        <th class="border-bottom">
+
+                                        </th>
+                                    </tr>
+                                    <tr class="D1">
+                                        <th rowspan="2" class="border-bottom">
+                                            D
+                                            <br>
+                                            Depósitos
+                                            Passíveis de
+                                            remoção
+                                        </th>
+                                        <th>
+                                            D1
+                                        </th>
+                                    </tr>
+                                    <tr class="D2">
+                                        <th class="border-bottom">
+                                            D2
+                                        </th>
+                                    </tr>
+                                    <tr class="E">
+                                        <th class="border-bottom">
+                                            E
+                                            <br>
+                                            Depósitos
+                                            naturais
+                                        </th>
+                                        <th class="border-bottom">
+
+                                        </th>
+                                    </tr>
                                 </tbody>
                             </table>
                             <div class="d-flex justify-content-end">
@@ -145,10 +183,14 @@
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center pb-2">
+                <img src="/imgs/cc.svg" alt="">
+            </div>
         </div>
-
+        <div class="footer d-flex justify-content-center align-items-center">
+            <img class="w-100" src="/imgs/logos.svg" alt="">
+        </div>
     </div>
-
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

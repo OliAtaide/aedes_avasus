@@ -7,6 +7,11 @@
     position: relative;
 }
 
+.card-criadouro{
+    padding: 40px;
+    border-radius: 16px;
+}
+
 .flex-criadouro {
     min-height: 100%;
     
@@ -33,25 +38,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-/*
-.col-criadouro:has(.ui-dropped) .close-container::after {
-    font-family: "bootstrap-icons";
-    content: "\F62A";
-    border-radius: 50%;
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    cursor: pointer;
-    border: 2px solid var(--color1);
-    color: var(--color1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*/
 .btn-grupo,
 .input-criadouro {
     width: 36px;
@@ -64,7 +50,7 @@
 }
 
 .input-criadouro {
-    background-color: white;
+    background-color: #dbdfe6;
     border: 2px solid var(--color1);
     border-radius: 4px;
     text-align: center;
@@ -99,16 +85,19 @@
 @media screen and (max-width: 600px) {
     .card-criadouro{
         margin-bottom: 11em !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .col-grupos {
         position: fixed;
+        background-color: #dbdfe6;
         width: 100%;
         z-index: 99;
-        background-color: #f7f9fc;
         left: 5%;
         bottom: 0;
         width: 90%;
+        border: 0;
         border-radius: 16px 16px 0;
 
         .card-title {

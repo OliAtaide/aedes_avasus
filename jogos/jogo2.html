@@ -14,56 +14,29 @@
 
 
 <body>
-    <nav class="sidebar d-flex flex-column">
-        <div class="d-flex w-100 justify-content-end">
-            <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth"
-                aria-expanded="true" aria-controls="collapseWidth">
-
-            </button>
-        </div>
-        <div class="collapse collapse-horizontal show h-100" id="collapseWidth">
-            <div class="d-flex flex-column h-100">
-                <ul>
-                    <li class="my-2">
-                        <h6>
-                            UNIDADE 2
-                        </h6>
-                        <p>
-                            Biologia e Morfologia
-                            dos Vetores
-                        </p>
-                    </li>
-                    <li class="my-2">
-                        <h6>
-                            Módulo
-                        </h6>
-                        <p>
-                            Biologia, monitoramento
-                            e controle de Aedes aegypti
-                        </p>
-                    </li>
-                    <li class="my-2">
-                        <h6>
-                            Conteudistas
-                        </h6>
-                        <p>
-                            Renata Antonaci Gama
-                            <br>
-                            Taciano de Moura Barbosa
-                        </p>
-                    </li>
-                </ul>
-                <img class="mt-auto" src="../imgs/avasus_logo.svg" alt="">
-                <img class="mt-3" src="../imgs/ellipsis.svg" alt="">
-            </div>
-        </div>
-    </nav>
     <div class="game">
         <div class="title w-100 text-end">
-            Quiz: Mitos e verdades sobre o Aedes aegypti
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-start">
+                        <strong>Módulo:</strong> Biologia, monitoramento e controle de Aedes aegypti
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 text-start">
+                        <strong>Unidade 2:</strong> Vigilância em Saúde
+                    </div>
+                    <div class="col-sm-6">
+                        <strong>Conteúdistas:</strong> Renata Antonaci Gama e Taciano de Moura Barbosa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle py-2 text-center fw-bold bg-white">
+            QUIZ: Mitos e Verdades sobre o Aedes Aegypt
         </div>
         <div class="game-container">
-            <div class="game-body d-flex">
+            <div class="container game-body d-flex">
                 <div id="successModal" class="modal fade">
                     <div class="modal-dialog modal-dialog-centered game-card">
                         <div class="modal-content p-3">
@@ -100,30 +73,36 @@
                         Iniciar Atividade
                     </button>
                 </div>
-                <div class="card card-criadouro m-4 w-100 p-3">
-                    <h4 class="card-title text-center my-auto"></h4>
-                    <div class="row">
-                        <div class="col-2 col-grupos">
-                            <h4 class="card-title text-center">
-                                Grupos
-                            </h4>
-                            <hr class="d-sm-none">
-                            <div class="row row-grupos">
+                <div class="card card-criadouro m-4">
+                    <h4 class="card-title text-center my-auto text-uppercase border-bottom pb-3">
+                        Associe as colunas
+                    </h4>
+                    <div class="row mt-3">
+                        <div class="col-2 col-grupos border-end ">
+                            <div class="pe-3">
+                                <h4 class="card-title text-center mb-3">
+                                    Grupos
+                                </h4>
+                                <hr class="d-sm-none">
+                                <div class="row row-grupos">
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-10 col-criadouros">
-                            <h4 class="card-title text-center">
-                                Criadouros
-                            </h4>
-                            <div class="row row-criadouros">
-                                <div class="col-sm-3">
-                                    <div class="d-flex flex-column mt-3">
-                                        <button class="btn btn-bordered btn-verif mb-3">
-                                            Verificar
-                                        </button>
-                                        <button class="btn btn-bordered btn-feedback">
-                                            Feedback
-                                        </button>
+                            <div class="ps-3">
+                                <h4 class="card-title text-center">
+                                    Criadouros
+                                </h4>
+                                <div class="row row-criadouros">
+                                    <div class="col-sm-3">
+                                        <div class="d-flex flex-column mt-3">
+                                            <button class="btn btn-bordered btn-verif mb-3">
+                                                Verificar
+                                            </button>
+                                            <button class="btn btn-bordered btn-feedback">
+                                                Feedback
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -202,6 +181,12 @@
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center pb-2">
+                <img src="/imgs/cc.svg" alt="">
+            </div>
+        </div>
+        <div class="footer d-flex justify-content-center align-items-center">
+            <img class="w-100" src="/imgs/logos.svg" alt="">
         </div>
     </div>
 </body>
