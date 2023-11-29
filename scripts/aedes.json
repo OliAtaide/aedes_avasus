@@ -75,6 +75,10 @@
         "resposta": "B"
       },
       {
+        "titulo": "Pneus",
+        "resposta": "D1"
+      },
+      {
         "titulo": "Caixa d’água elevada",
         "resposta": "A1"
       },
@@ -109,10 +113,6 @@
       {
         "titulo": "Entulho de construção",
         "resposta": "D2"
-      },
-      {
-        "titulo": "Pneus",
-        "resposta": "D1"
       },
       {
         "titulo": "Câmara de ar",

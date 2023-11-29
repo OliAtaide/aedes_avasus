@@ -4,15 +4,7 @@ var current_index = -1;
 
 function imprimirGrupo(index, letra) {
   return (
-    "<div data-index=" +
-    index +
-    " data-value=" +
-    letra +
-    ' class="btn btn-grupo btn-grupo-' +
-    letra +
-    '">' +
-    letra +
-    "</div>"
+    `<div data-index="${index}" data-value="${letra}" class="btn btn-grupo btn-grupo-${letra}">${letra}</div>`
   );
 }
 
@@ -30,32 +22,30 @@ function printQuestoes() {
           content += imprimirGrupo(i, value.letra);
         }
         $(".row-grupos").append(
-          '<div class=" col-3 col-sm-6 col-grupo col-grupo-' +
-            value.letra +
-            '">' +
-            content +
-            "</div>"
+          `<div class=" col-3 col-sm-6 col-grupo col-grupo-${value.letra}">
+            ${content} 
+          </div>`
         );
       });
       $(".btn-grupo").draggable();
 
-      _data[1].criadouros.forEach(function (value, i) {
+      _data[1].criadouros.reverse().forEach(function (value, i) {
         $(".row-criadouros").prepend(
           `
-                    <div class="col-6 col-sm-3 col-criadouro">
-                        <div class="flex-criadouro d-flex flex-column justify-content-center">
-                            <div class="d-flex align-items-end mt-auto"><p class="text-center my-2 w-100">` +
-            value.titulo +
-            `
-                            </p></div>
-                            <div class="close-container">
-                            </div>
-                            <button data-index=` +
-            i +
-            ` class="input-criadouro" ></button>
-                        </div>
-                    </div>
-                    `
+            <div class="col-6 col-sm-3 col-criadouro my-2">
+              <div class="flex-criadouro d-flex flex-column justify-content-center">
+                <div class="d-flex align-items-end mt-auto">
+                  <p class="text-center my-2 w-100">
+                    ${value.titulo}
+                  </p>
+                </div>
+                <div class="close-container">
+                </div>
+                <button type="button" data-index=${i} class="input-criadouro" >
+                </button>
+              </div>
+            </div>
+          `
         );
       });
 
@@ -149,10 +139,14 @@ $(document).on("click", ".btn-verif", function () {
         $(this).addClass("ui-wrong");
       }
     });
+    /*
     $(".modal .card-title").html(
       `Você acertou ${acertos} de ${criadouros.length} criadouros.`
     );
     success.show();
+    */
+   $('.btn-verif').hide();
+   $('.btn-redo').show();
   }
 });
 
@@ -170,8 +164,15 @@ function refazerTeste() {
   });
   $('.ui-right').removeClass("ui-right");
   success.hide();
+  $('.btn-verif').show();
+  $('.btn-redo').hide();
 }
 
 $(document).on("click", ".btn-redo", function () {
   refazerTeste();
 });
+
+$('.btn-next').click(function () {
+  $('.game-card').hide();
+  $('.card-criadouro').show();
+})
