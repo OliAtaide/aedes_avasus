@@ -2,4 +2,12 @@
   height: 100vh;
 }
 
+.card-title-wrong {
+  color: #FF6058;
+}
+
+.card-title-right {
+  color: #27CA40;
+}
+
 /*# sourceMappingURL=jogo1.css.map */

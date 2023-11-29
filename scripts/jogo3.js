@@ -1,3 +1,6 @@
+window.open("../jogos/jogo3.html");
+window.close();
+
 var grupos, botoes;
 
 var current_index = -1;
@@ -76,7 +79,7 @@ $(document).on('click', '.btn-grupo', function () {
 })
 
 // mobile
-
+/*
 $(document).on('click', '.btn-input', function () {
     console.log(current_index);
     if (current_index != -1 && !$(this).hasClass('ui-dropped')) {
@@ -97,8 +100,17 @@ $(document).on('click', '.btn-input', function () {
         current_index = -1;
     }
 })
+*/
 
 //
+
+$(document).on('click', '.ui-dropped', function () {
+    const val = $(this).val();
+    const btn = $(`[data-index='${val}']`);
+    btn.prop("disabled", false);
+    $(this).removeClass('ui-dropped');
+    $(this).html('');
+})
 
 const success = new bootstrap.Modal('#successModal', {
     backdrop: 'static',
