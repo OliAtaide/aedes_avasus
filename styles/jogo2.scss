@@ -112,3 +112,15 @@
         }
     }
 }
+
+.modal{
+    --bs-modal-width: auto;
+}
+
+.modal-content{
+    height: auto !important;
+    
+    .card-title{
+        margin-bottom: 1em !important;
+    }
+}

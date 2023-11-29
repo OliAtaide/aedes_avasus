@@ -105,5 +105,15 @@
     width: 75%;
   }
 }
+.modal {
+  --bs-modal-width: auto;
+}
+
+.modal-content {
+  height: auto !important;
+}
+.modal-content .card-title {
+  margin-bottom: 1em !important;
+}
 
 /*# sourceMappingURL=jogo2.css.map */
