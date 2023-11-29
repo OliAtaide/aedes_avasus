@@ -126,7 +126,15 @@ $(document).on('click', '.btn-verif', function () {
             var botao = botoes[$(this).val()]
             var grupo = $(this).data('grupo')
             var tipo = $(this).data('tipo')
-            if (grupo == botao.grupo && tipo == botao.tipo) {
+
+            var a1_n_a2 = grupo = "A1A2";
+            var a1_or_a2 = botao.grupo == "A1" || botao.grupo == "A2";
+
+            var condition1 = grupo == botao.grupo && tipo == botao.tipo;
+            var condition2 = a1_n_a2 && a1_or_a2;
+
+
+            if (condition1 || condition2) {
                 $(this).addClass('ui-right');
                 acertos++;
             }
@@ -141,6 +149,7 @@ $(document).on('click', '.btn-verif', function () {
 
     $('.btn-verif').hide();
     $('.btn-retry').show();
+    $('.btn-input').prop('disabled', true);
     //}
 
 })
@@ -158,6 +167,7 @@ $(document).on('click', '.btn-retry', function () {
         $(this).html('');
         $('.btn-verif').show();
         $('.btn-retry').hide();
+        $('.btn-input').prop('disabled', false);
     })
 })
 

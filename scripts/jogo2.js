@@ -147,6 +147,7 @@ $(document).on("click", ".btn-verif", function () {
     */
    $('.btn-verif').hide();
    $('.btn-redo').show();
+   $('.input-criadouro').prop('disabled', true);
   }
 });
 
@@ -166,6 +167,7 @@ function refazerTeste() {
   success.hide();
   $('.btn-verif').show();
   $('.btn-redo').hide();
+  $('.input-criadouro').prop('disabled', false);
 }
 
 $(document).on("click", ".btn-redo", function () {
