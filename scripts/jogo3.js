@@ -1,6 +1,3 @@
-window.open("../jogos/jogo3.html");
-window.close();
-
 var grupos, botoes;
 
 var current_index = -1;
