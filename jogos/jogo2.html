@@ -24,7 +24,7 @@
                     <div class="col-sm-6">
                     </div>
                     <div class="col-sm-6 text-start">
-                        <strong>Unidade 2:</strong> Vigilância em Saúde
+                        <strong>Unidade 3:</strong> Vigilância em Saúde
                     </div>
                     <div class="col-sm-6">
                         <strong>Conteudistas:</strong> Renata Antonaci Gama e Taciano de Moura Barbosa
@@ -36,31 +36,8 @@
             Tipos de criadouros mais importantes para Aedes aegypti e sua classificação
         </div>
         <div class="game-container">
-            <div class="container game-body d-flex">
-                <div id="successModal" class="modal fade">
-                    <div class="modal-dialog modal-dialog-centered game-card">
-                        <div class="modal-content p-3">
-                            <h4 class="card-title text-center my-auto">
-                                Você acertou.
-                            </h4>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-bordered btn-redo w-100">
-                                        Refazer teste
-                                    </button>
-                                </div>
-                                <!--
-                                <div class="col">
-                                    <button onclick="window.close()" class="btn btn-next w-100" data-next="game-card-0">
-                                        Finalizar
-                                    </button>
-                                </div>
-                                -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card game-card p-3 my-4 mx-auto">
+            <div class="game-body d-flex">
+                <div class="card game-card m-auto">
                     <h4 class="card-title text-center my-auto">
                         Olá, a seguir, vamos exercitar um pouco do conhecimento adquirido neste módulo. Faremos uma
                         pequena dinâmica
@@ -165,7 +142,7 @@
                         que
                         o descarte/remoção deve ser diferenciado. O subgrupo D2 são os resíduos sólidos, representados
                         na
-                        avaliação acima por latas, recipientes plásticos descartáveis, garrafas Pet, sucatas e entulhos
+                        avaliação acima por latas, recipientes plásticos descartáveis, garrafas PET, sucatas e entulhos
                         de
                         construção.
                     </p>
@@ -192,19 +169,38 @@
             <img class="w-100" src="../imgs/logos.svg" alt="">
         </div>
     </div>
+
+    <div id="successModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h4 class="card-title text-center my-auto">
+                    Você acertou.
+                </h4>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-bordered w-100" data-bs-dismiss="modal" aria-label="Close">
+                            OK
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button onclick="window.close()" class="btn btn-next w-100" data-next="game-card-0">
+                            Finalizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
     crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
     integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
-<script src="../scripts/script.js"></script>
-<script src="../scripts/jogo2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
 
-<script>
-</script>
+<script src="/scripts/jogo2.js"></script>
 
 </html>

@@ -1,6 +1,9 @@
 .col-inputs {
-  height: 50vh;
   overflow: scroll;
+}
+
+.d-sticky {
+  top: 0;
 }
 
 .card-title {

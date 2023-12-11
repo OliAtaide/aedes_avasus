@@ -3,9 +3,7 @@ var grupos = [];
 var current_index = -1;
 
 function imprimirGrupo(index, letra) {
-  return (
-    `<div data-index="${index}" data-value="${letra}" class="btn btn-grupo btn-grupo-${letra}">${letra}</div>`
-  );
+  return `<div data-index="${index}" data-value="${letra}" class="btn btn-grupo btn-grupo-${letra}">${letra}</div>`;
 }
 
 function printQuestoes() {
@@ -122,11 +120,6 @@ $(document).on("click", ".card-criadouro .btn-feedback", function () {
   $(".card-feedback").show();
 });
 
-const success = new bootstrap.Modal("#successModal", {
-  backdrop: "static",
-  keyboard: false,
-});
-
 $(document).on("click", ".btn-verif", function () {
   var acertos = 0;
   if ($(".ui-dropped").length == criadouros.length) {
@@ -139,21 +132,22 @@ $(document).on("click", ".btn-verif", function () {
         $(this).addClass("ui-wrong");
       }
     });
-    /*
+
     $(".modal .card-title").html(
       `Você acertou ${acertos} de ${criadouros.length} criadouros.`
     );
-    success.show();
-    */
-   $('.btn-verif').hide();
-   $('.btn-redo').show();
-   $('.input-criadouro').prop('disabled', true);
+
+    $(".btn-verif").hide();
+    $(".btn-redo").show();
+    $(".input-criadouro").prop("disabled", true);
+
+    $('#successModal').modal('show');
   }
 });
 
 function refazerTeste() {
-  console.log($('.ui-wrong'));
-  $(".ui-wrong").each(function( index ) {
+  console.log($(".ui-wrong"));
+  $(".ui-wrong").each(function (index) {
     $(".col-grupo-" + $(this).val()).append(
       imprimirGrupo($(this).data("index"), $(this).val())
     );
@@ -163,18 +157,21 @@ function refazerTeste() {
     $(this).removeClass("ui-dropped");
     $(this).removeClass("ui-wrong");
   });
-  $('.ui-right').removeClass("ui-right");
-  success.hide();
-  $('.btn-verif').show();
-  $('.btn-redo').hide();
-  $('.input-criadouro').prop('disabled', false);
+  $(".ui-right").removeClass("ui-right");
+  $(".btn-verif").show();
+  $(".btn-redo").hide();
+  $(".input-criadouro").prop("disabled", false);
 }
 
 $(document).on("click", ".btn-redo", function () {
   refazerTeste();
 });
 
-$('.btn-next').click(function () {
-  $('.game-card').hide();
-  $('.card-criadouro').show();
-})
+$(".btn-next").click(function () {
+  $(".game-card").hide();
+  $(".card-criadouro").show();
+});
+
+$(window).on('load', function() {
+  $('#successModal').modal('show');
+});

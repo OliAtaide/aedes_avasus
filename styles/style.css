@@ -79,7 +79,8 @@ ul h6 {
 .game {
   width: 100%;
 }
-.game .title, .game .subtitle {
+.game .title,
+.game .subtitle {
   color: var(--color1);
 }
 .game .title {
@@ -87,6 +88,9 @@ ul h6 {
 }
 .game .game-container {
   background-color: #a5adbb;
+}
+.game .game-container .game-body {
+  min-height: 100vh;
 }
 .game .game-container .game-body .game-card {
   width: 50%;
@@ -120,6 +124,10 @@ ul h6 {
 
 .ui-right {
   background-color: #27ca40 !important;
+}
+
+.modal-dialog {
+  width: 50%;
 }
 
 .modal-content {
