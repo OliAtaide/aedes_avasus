@@ -171,7 +171,8 @@ $(".btn-next").click(function () {
   $(".game-card").hide();
   $(".card-criadouro").show();
 });
-
+/*
 $(window).on('load', function() {
   $('#successModal').modal('show');
 });
+*/

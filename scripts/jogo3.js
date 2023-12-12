@@ -156,6 +156,7 @@ $(document).on("click", ".btn-verif", function () {
 
     $(".btn-verif").hide();
     $(".btn-retry").show();
+    $(".btn-end").show();
     $(".btn-input").prop("disabled", true);
   }
 });
