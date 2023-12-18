@@ -30,9 +30,10 @@ function printQuestoes(num) {
                             </div>
                         </div>
                         <div style="display: none;" class="card game-card game-card-${i}-result m-auto" >
-                            <h4 class="card-title my-auto">
-                                ${value.verdade ? "VERDADE" : "MITO  "}
-                            </h4>
+                            <h1 class="card-title my-auto text-center">
+                                <i class='bi'></i><br>
+                                ${value.verdade ? "VERDADE" : "MITO"}
+                            </h1>
                             <h4>
                                 ${value.texto}
                             </h4>
@@ -98,19 +99,28 @@ $(document).on("click", ".btn-next", function () {
 });
 
 $(document).on("click", ".btn-opt", function () {
+
   var index = $(this).data("index");
   var resposta = $(this).data("value");
 
   var result_title = $(`.game-card-${index}-result .card-title`);
-  console.log(result_title);
+
+  var result_icon = $(`.game-card-${index}-result .bi`);
+
+  result_title.removeClass('card-title-right');
+  result_title.removeClass('card-title-wrong');
+  result_icon.removeClass('bi-check-circle');
+  result_icon.removeClass('bi-x-circle');
 
   if (resposta == questoes[index].verdade) {
     acertos++;
     acertou = true;
     result_title.addClass('card-title-right');
+    result_icon.addClass('bi-check-circle');
   } else {
     acertou = false;
     result_title.addClass('card-title-wrong');
+    result_icon.addClass('bi-x-circle');
   }
   if (index == questoes.length - 1) {
     $(".game-card-" + (index + 1) + " h4").html(

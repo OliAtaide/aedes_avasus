@@ -140,10 +140,10 @@ $(document).on("click", ".btn-verif", function () {
       var a1_n_a2 = (grupo = "A1A2");
       var a1_or_a2 = botao.grupo == "A1" || botao.grupo == "A2";
 
-      var condition1 = grupo == botao.grupo && tipo == botao.tipo;
-      var condition2 = a1_n_a2 && a1_or_a2;
+      var condition1 = (a1_n_a2 && a1_or_a2) || grupo == botao.grupo;
+      var condition2 =  tipo == botao.tipo;
 
-      if (condition1 || condition2) {
+      if (condition1 && condition2) {
         $(this).addClass("ui-right");
         acertos++;
       } else {
