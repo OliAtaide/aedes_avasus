@@ -20,18 +20,6 @@ function printInputs() {
             "</button></div>"
         );
       });
-      /*
-            grupos.forEach(function (value, i) {
-                $('tbody').append(
-                    '<tr><th>'
-                    + value +
-                    '</th><td>' +
-                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=1 class="btn-input"></button>' + '</td></div>/<td>' +
-                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=2 class="btn-input"></button>' + '</td></div><td>' +
-                    '<div class="d-flex"><button data-grupo=' + value + ' data-tipo=3 class="btn-input"></button>' + '</td></div></tr>'
-                )
-            })
-            */
 
       grupos.forEach(function (value, i) {
         $("tbody ." + value).append(
@@ -43,7 +31,7 @@ function printInputs() {
           </td>
           <td>
             <div class="d-flex">
-              <button type="button" title="" data-grupo='${value}' data-tipo=2 class="btn-input"></button>
+              <button type="button" title="" data-grupo='${value == 'A1' || value == 'A2' ? 'O' : value}' data-tipo=2 class="btn-input"></button>
             </div>
           </td>
           <td>
