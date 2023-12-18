@@ -168,17 +168,17 @@
     "grupos": ["A1", "A2", "B", "C", "D1", "D2", "E"],
     "botoes": [
       {
-        "texto": "Caixa d’ água elevada ligada à rede pública e/ou sistema de abastecimento particular (poço, cisterna, mina)",
+        "texto": "Caixa d’ água elevada ligada à rede pública e/ou sistema de abastecimento particular (poço, cisterna, mina).",
         "grupo": "A1",
         "tipo": 1
       },
       {
-        "texto": "Depósitos em obras e horticultura. Depósitos ao nível do solo para armazenar depósitos de barros (filtros, moringas, potes) mento doméstico: tonel, tambor, barril, tina,  cisternas, caixa d’água, capitação de água (poço, cacimba)",
+        "texto": "Depósitos em obras e horticultura. Depósitos ao nível do solo para armazenar depósitos de barros (filtros, moringas, potes) mento doméstico: tonel, tambor, barril, tina,  cisternas, caixa d’água, capitação de água (poço, cacimba).",
         "grupo": "A2",
         "tipo": 1
       },
       {
-        "texto": "Vasos/frascos com água, prato, pingadeira, recipiente de degelo de refrigeradores, bebedouros, pequenas fontes ornamentais",
+        "texto": "Vasos/frascos com água, prato, pingadeira, recipiente de degelo de refrigeradores, bebedouros, pequenas fontes ornamentais.",
         "grupo": "B",
         "tipo": 1
       },
@@ -198,18 +198,18 @@
         "tipo": 1
       },
       {
-        "texto": "Folhas de bromélias, ocos em árvores, buracos em rochas, restos de animais cascas, carapaças",
+        "texto": "Folhas de bromélias, ocos em árvores, buracos em rochas, restos de animais cascas, carapaças.",
         "grupo": "E",
         "tipo": 1
       },
       {
         "texto": "Articulação com a empresa de abastecimento de água visando ampliar a rede e regularizar o fornecimento.",
-        "grupo": "A1A2",
+        "grupo": "A1",
         "tipo": 2
       },
       {
         "texto": "Articulação com a empresa de abastecimento de água visando ampliar a rede e regularizar o fornecimento.",
-        "grupo": "A1A2",
+        "grupo": "A1",
         "tipo": 2
       },
       {
@@ -218,7 +218,7 @@
         "tipo": 2
       },
       {
-        "texto": "Articulação com a Secretaria de Ura elaboração e aprovação de código banização e Legislativo para garantir de postura municipal que oriente a construção de imóveis protegidos dos fatores que propiciam a infestação por Aedes Aegypti.",
+        "texto": "Articulação com a Secretaria de Urbanização e Legislativo para garantir a elaboração e aprovação de código e postura municipal que oriente a construção de imóveis protegidos dos fatores que propiciam a infestação por Aedes Aegypti.",
         "grupo": "C",
         "tipo": 2
       },
@@ -243,7 +243,7 @@
         "tipo": 3
       },
       {
-        "texto": "Quando indispensáveis, orientar quanto à cobertura, vedação e lavagem, caso contrário descartar. Em caso de reincidência, notificar. Tratar como última alternativa",
+        "texto": "Quando indispensáveis, orientar quanto à cobertura, vedação e lavagem, caso contrário descartar. Em caso de reincidência, notificar. Tratar como última alternativa.",
         "grupo": "A2",
         "tipo": 3
       },
@@ -263,7 +263,7 @@
         "tipo": 3
       },
       {
-        "texto": "Lixo/entulho: instruir sobre destino adequado. Não tratar. Sucatas em PE e pátios, se indispensáveis, proteger sob cobertura. Tratamento químico conforme indicado",
+        "texto": "Lixo/entulho: instruir sobre destino adequado. Não tratar. Sucatas em PE e pátios, se indispensáveis, proteger sob cobertura. Tratamento químico conforme indicado.",
         "grupo": "D2",
         "tipo": 3
       },

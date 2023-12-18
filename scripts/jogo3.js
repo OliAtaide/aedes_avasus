@@ -35,19 +35,23 @@ function printInputs() {
 
       grupos.forEach(function (value, i) {
         $("tbody ." + value).append(
-          "<td>" +
-            '<div class="d-flex"><button data-grupo=' +
-            value +
-            ' data-tipo=1 class="btn-input"></button>' +
-            "</td></div>/<td>" +
-            '<div class="d-flex"><button data-grupo=' +
-            value +
-            ' data-tipo=2 class="btn-input"></button>' +
-            "</td></div><td>" +
-            '<div class="d-flex"><button data-grupo=' +
-            value +
-            ' data-tipo=3 class="btn-input"></button>' +
-            "</td></div></tr>"
+          `
+          <td>
+            <div class="d-flex">
+              <button type="button" title="" data-grupo='${value}' data-tipo=1 class="btn-input"></button>
+            </div>
+          </td>
+          <td>
+            <div class="d-flex">
+              <button type="button" title="" data-grupo='${value}' data-tipo=2 class="btn-input"></button>
+            </div>
+          </td>
+          <td>
+            <div class="d-flex">
+              <button type="button" title="" data-grupo='${value}' data-tipo=3 class="btn-input"></button>
+            </div>
+          </td>
+          `
         );
       });
 
@@ -137,11 +141,15 @@ $(document).on("click", ".btn-verif", function () {
       var grupo = $(this).data("grupo");
       var tipo = $(this).data("tipo");
 
-      var a1_n_a2 = (grupo = "A1A2");
-      var a1_or_a2 = botao.grupo == "A1" || botao.grupo == "A2";
+      // var a1_n_a2 = (grupo = "A1A2");
+      // var a1_or_a2 = botao.grupo == "A1" || botao.grupo == "A2";
+      // (a1_n_a2 && a1_or_a2) || 
 
-      var condition1 = (a1_n_a2 && a1_or_a2) || grupo == botao.grupo;
+      var condition1 = grupo == botao.grupo;
       var condition2 =  tipo == botao.tipo;
+
+      console.log(botao.grupo, grupo);
+      console.log(botao.tipo, tipo);
 
       if (condition1 && condition2) {
         $(this).addClass("ui-right");
