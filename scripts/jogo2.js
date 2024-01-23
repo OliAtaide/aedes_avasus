@@ -6,15 +6,16 @@ function imprimirGrupo(index, letra) {
   return `<div data-index="${index}" data-value="${letra}" class="btn btn-grupo btn-grupo-${letra}">${letra}</div>`;
 }
 
+
 function printQuestoes() {
   $.ajax({
     url: "../scripts/aedes.json",
     dataType: "json",
     type: "GET",
     success: function (_data) {
-      criadouros = _data[1].criadouros;
+      criadouros = shuffle(_data[1].criadouros);
       grupos = _data[1].grupos;
-      _data[1].grupos.forEach(function (value, i) {
+      grupos.forEach(function (value, i) {
         var content = "";
         for (let j = 0; j < value.quantidade; j++) {
           content += imprimirGrupo(i, value.letra);
@@ -27,7 +28,7 @@ function printQuestoes() {
       });
       $(".btn-grupo").draggable();
 
-      _data[1].criadouros.reverse().forEach(function (value, i) {
+      criadouros.reverse().forEach(function (value, i) {
         $(".row-criadouros").prepend(
           `
             <div class="col-6 col-sm-3 col-criadouro my-2">

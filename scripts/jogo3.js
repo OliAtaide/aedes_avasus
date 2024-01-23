@@ -9,7 +9,7 @@ function printInputs() {
     type: "GET",
     success: function (_data) {
       grupos = _data[2].grupos;
-      botoes = _data[2].botoes;
+      botoes = shuffle(_data[2].botoes);
 
       botoes.forEach(function (value, i) {
         $(".row-grupos").append(
@@ -31,7 +31,9 @@ function printInputs() {
           </td>
           <td>
             <div class="d-flex">
-              <button type="button" title="" data-grupo='${value == 'A1' || value == 'A2' ? 'O' : value}' data-tipo=2 class="btn-input"></button>
+              <button type="button" title="" data-grupo='${
+                value == "A1" || value == "A2" ? "O" : value
+              }' data-tipo=2 class="btn-input"></button>
             </div>
           </td>
           <td>
@@ -106,7 +108,7 @@ $(document).on('click', '.btn-input', function () {
 
 //
 
-$(document).on("click", ".ui-dropped", function () {
+$(document).on("click", ".ui-dropped:not(.ui-result)", function () {
   const val = $(this).val();
   const btn = $(`[data-index='${val}']`);
   btn.prop("disabled", false);
@@ -131,13 +133,15 @@ $(document).on("click", ".btn-verif", function () {
 
       // var a1_n_a2 = (grupo = "A1A2");
       // var a1_or_a2 = botao.grupo == "A1" || botao.grupo == "A2";
-      // (a1_n_a2 && a1_or_a2) || 
+      // (a1_n_a2 && a1_or_a2) ||
 
       var condition1 = grupo == botao.grupo;
-      var condition2 =  tipo == botao.tipo;
+      var condition2 = tipo == botao.tipo;
 
       console.log(botao.grupo, grupo);
       console.log(botao.tipo, tipo);
+
+      $(this).addClass("ui-result");
 
       if (condition1 && condition2) {
         $(this).addClass("ui-right");
@@ -158,6 +162,8 @@ $(document).on("click", ".btn-verif", function () {
 });
 
 $(document).on("click", ".btn-retry", function () {
+  $(".ui-result").removeClass("ui-result");
+
   $(".ui-wrong").each(function (params) {
     var index = $(this).val();
     console.log(index);
