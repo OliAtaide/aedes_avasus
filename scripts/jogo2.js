@@ -6,7 +6,6 @@ function imprimirGrupo(index, letra) {
   return `<div data-index="${index}" data-value="${letra}" class="btn btn-grupo btn-grupo-${letra}">${letra}</div>`;
 }
 
-
 function printQuestoes() {
   $.ajax({
     url: "../scripts/aedes.json",
@@ -142,7 +141,7 @@ $(document).on("click", ".btn-verif", function () {
     $(".btn-redo").show();
     $(".input-criadouro").prop("disabled", true);
 
-    $('#successModal').modal('show');
+    $("#successModal").modal("show");
   }
 });
 

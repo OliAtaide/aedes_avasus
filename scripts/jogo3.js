@@ -150,14 +150,20 @@ $(document).on("click", ".btn-verif", function () {
         $(this).addClass("ui-wrong");
       }
     });
-    if (acertos == grupos.length * 3) {
+    /*if (acertos == grupos.length * 3) {
       success.show();
-    }
+    }*/
+
+    $("#successModal .card-title").html(
+      `Você acertou ${acertos} de ${(grupos.length * 3)} criadouros.`
+    );
 
     $(".btn-verif").hide();
     $(".btn-retry").show();
     $(".btn-end").show();
     $(".btn-input").prop("disabled", true);
+
+    $("#successModal").modal("show");
   }
 });
 
