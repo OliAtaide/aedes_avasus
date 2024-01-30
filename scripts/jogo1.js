@@ -31,8 +31,9 @@ function printQuestoes(num) {
                         </div>
                         <div style="display: none;" class="card game-card game-card-${i}-result m-auto" >
                             <h1 class="card-title my-auto text-center">
-                                <i class='bi'></i><br>
+                                
                                 ${value.verdade ? "VERDADE" : "MITO"}
+                                <i class='bi'></i><br>
                             </h1>
                             <h4>
                                 ${value.texto}
