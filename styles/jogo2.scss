@@ -82,6 +82,15 @@
     border: none !important;
 }
 
+.game-container{
+    min-height: 100%;
+
+    .game-card{
+        width: 50%;
+        margin-top: 2em !important;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .card-criadouro{
         margin-bottom: 11em !important;
