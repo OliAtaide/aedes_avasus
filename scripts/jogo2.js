@@ -146,18 +146,31 @@ $(document).on("click", ".btn-verif", function () {
 });
 
 function refazerTeste() {
-  console.log($(".ui-wrong"));
-  $(".ui-wrong").each(function (index) {
-    $(".col-grupo-" + $(this).val()).append(
-      imprimirGrupo($(this).data("index"), $(this).val())
-    );
-    $(".btn-grupo-" + $(this).val()).draggable();
-    $(this).removeAttr("value");
-    $(this).html("");
-    $(this).removeClass("ui-dropped");
-    $(this).removeClass("ui-wrong");
-  });
-  $(".ui-right").removeClass("ui-right");
+  if ($(".ui-wrong").length == 0) {
+    $(".ui-right").each(function (index) {
+      $(".col-grupo-" + $(this).val()).append(
+        imprimirGrupo($(this).data("index"), $(this).val())
+      );
+      $(".btn-grupo-" + $(this).val()).draggable();
+      $(this).removeAttr("value");
+      $(this).html("");
+      $(this).removeClass("ui-dropped");
+      $(this).removeClass("ui-right");
+    });
+  } else {
+    $(".ui-wrong").each(function (index) {
+      $(".col-grupo-" + $(this).val()).append(
+        imprimirGrupo($(this).data("index"), $(this).val())
+      );
+      $(".btn-grupo-" + $(this).val()).draggable();
+      $(this).removeAttr("value");
+      $(this).html("");
+      $(this).removeClass("ui-dropped");
+      $(this).removeClass("ui-wrong");
+    });
+
+    $(".ui-right").removeClass("ui-right");
+  }
   $(".btn-verif").show();
   $(".btn-redo").hide();
   $(".input-criadouro").prop("disabled", false);
