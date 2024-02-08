@@ -38,4 +38,8 @@ html, body {
   padding-top: 2em;
 }
 
+.game-card {
+  gap: 1em !important;
+}
+
 /*# sourceMappingURL=jogo1.css.map */
